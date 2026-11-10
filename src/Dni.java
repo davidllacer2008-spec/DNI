@@ -44,6 +44,13 @@ public class Dni {
     public boolean isCorrect() {
         return number >= 0;
     }
+    public static char letterForDni(int number) {
+        return LETRAS [number % 23];
+    }
+
+    public static String NifForDni(int number) {
+        return number + "-" + letterForDni(number);
+    }
 
 
 
